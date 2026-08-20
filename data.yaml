@@ -1,0 +1,11 @@
+path: dataset
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: bianca
+  1: hawaiian
+  2: manager_choice
+  3: pepperoni

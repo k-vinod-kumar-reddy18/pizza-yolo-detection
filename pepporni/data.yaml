@@ -1,0 +1,7 @@
+names:
+  0: bianca
+  1: hawaiian
+  2: manager_choice
+  3: pepporoni
+path: .
+train: train.txt

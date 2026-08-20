@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.cache
+
+.vscode/
+.env
+
+runs/detect/*/train_batch*.jpg
+runs/detect/*/val_batch*.jpg
+
