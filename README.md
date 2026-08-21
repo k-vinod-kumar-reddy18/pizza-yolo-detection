@@ -19,7 +19,7 @@ This project detects and classifies different types of pizza using YOLO.
 ## Model
 
 - YOLO26n
-- Epochs: 5
+- Epochs: 20
 - Batch Size: 2
 - Image Size: 320
 - Device: CPU
