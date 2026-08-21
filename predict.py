@@ -1,8 +1,8 @@
 from ultralytics import YOLO
 
-# Load the NEW trained model
+# Load the 20-epoch trained model
 model = YOLO(
-    "runs/detect/runs/retail_yolo_initial-7/weights/best.pt"
+    "runs/detect/runs/retail_yolo_20epochs/weights/best.pt"
 )
 
 # Test on new images
