@@ -31,6 +31,40 @@ This project detects and classifies different types of pizza using YOLO.
 - mAP50: 44.1%
 - mAP50-95: 40.2%
 
+## ONNX Model Conversion
+
+The trained YOLO model was converted from PyTorch format (`.pt`) to ONNX format (`.onnx`) for deployment and inference.
+
+### Model Conversion
+
+    from ultralytics import YOLO
+
+    model = YOLO("best.pt")
+    model.export(format="onnx")
+
+The converted model is:
+
+`best.onnx`
+
+The ONNX model was successfully loaded and tested using ONNX Runtime.
+
+### ONNX Inference
+
+The exported ONNX model was used to perform inference on test images.
+
+Example:
+
+    from ultralytics import YOLO
+
+    model = YOLO("best.onnx")
+    results = model("test_images/piz2.jpg", imgsz=320, save=True)
+
+The ONNX model successfully detected pizza classes such as:
+
+- Hawaiian
+- Bianca
+- Pepperoni
+
 ## Files
 
 - `combine_data.py` – Combines the dataset
@@ -41,4 +75,4 @@ This project detects and classifies different types of pizza using YOLO.
 
 ## Technologies
 
-Python, YOLO, Ultralytics
+Python, YOLO, Ultralytics, ONNX, ONNX Runtime
